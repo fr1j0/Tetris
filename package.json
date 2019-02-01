@@ -4,13 +4,13 @@
   "description": "yggdrasil game dev test",
   "main": "index.js",
   "scripts": {
-      "build": "poi --prod",
-      "dev": "poi --serve"
+    "build": "poi --prod",
+    "dev": "poi --serve"
   },
   "author": "fr1j0",
   "license": "ISC",
   "dependencies": {
-    "pixi": "^0.3.1"
+    "pixi.js": "^4.8.5"
   },
   "devDependencies": {
     "poi": "^12.5.5"
