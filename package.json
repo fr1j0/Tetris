@@ -1,0 +1,18 @@
+{
+  "name": "yggdrasil",
+  "version": "1.0.0",
+  "description": "yggdrasil game dev test",
+  "main": "index.js",
+  "scripts": {
+      "build": "poi --prod",
+      "dev": "poi --serve"
+  },
+  "author": "fr1j0",
+  "license": "ISC",
+  "dependencies": {
+    "pixi": "^0.3.1"
+  },
+  "devDependencies": {
+    "poi": "^12.5.5"
+  }
+}
