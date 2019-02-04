@@ -1,0 +1,69 @@
+{
+    "width": 240,
+    "height": 400,
+    "assets": [
+        {
+            "name": "I",
+            "block": "./assets/sprites/block_cyan.png",
+            "matrix": [
+                [0, 0, 0, 0],
+                [1, 1, 1, 1],
+                [0, 0, 0, 0],
+                [0, 0, 0, 0]
+            ]
+        },
+        {
+            "name": "J",
+            "url": "./assets/sprites/block_blue.png",
+            "matrix": [
+                [0, 0, 0],
+                [1, 0, 0],
+                [1, 1, 1]
+            ]
+        },
+        {
+            "name": "L",
+            "url": "./assets/sprites/block_orange.png",
+            "matrix": [
+                [0, 0, 0],
+                [0, 0, 1],
+                [1, 1, 1]
+            ]
+        },
+        {
+            "name": "O",
+            "url": "./assets/sprites/block_yellow.png",
+            "matrix": [
+                [1, 1],
+                [1, 1]
+            ]
+        },
+        {
+            "name": "S",
+            "url": "./assets/sprites/block_green.png",
+            "matrix": [
+                [0, 1, 1],
+                [1, 1, 0],
+                [0, 0, 0]
+            ]
+        },
+        {
+            "name": "T",
+            "url": "./assets/sprites/block_purple.png",
+            "matrix": [
+                [0, 1, 0],
+                [1, 1, 1],
+                [0, 0, 0]
+            ]
+        },
+        {
+            "name": "Z",
+            "url": "./assets/sprites/block_red.png",
+            "matrix": [
+                [1, 1, 0],
+                [0, 1, 1],
+                [0, 0, 0]
+            ]
+        }
+    ]
+}
