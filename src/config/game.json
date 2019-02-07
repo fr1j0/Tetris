@@ -4,7 +4,7 @@
     "assets": [
         {
             "name": "I",
-            "block": "./assets/sprites/block_cyan.png",
+            "tile": "./assets/images/blue.png",
             "matrix": [
                 [0, 0, 0, 0],
                 [1, 1, 1, 1],
@@ -14,7 +14,7 @@
         },
         {
             "name": "J",
-            "url": "./assets/sprites/block_blue.png",
+            "tile": "./assets/images/cyan.png",
             "matrix": [
                 [0, 0, 0],
                 [1, 0, 0],
@@ -23,7 +23,7 @@
         },
         {
             "name": "L",
-            "url": "./assets/sprites/block_orange.png",
+            "tile": "./assets/images/orange.png",
             "matrix": [
                 [0, 0, 0],
                 [0, 0, 1],
@@ -32,7 +32,7 @@
         },
         {
             "name": "O",
-            "url": "./assets/sprites/block_yellow.png",
+            "tile": "./assets/images/purple.png",
             "matrix": [
                 [1, 1],
                 [1, 1]
@@ -40,7 +40,7 @@
         },
         {
             "name": "S",
-            "url": "./assets/sprites/block_green.png",
+            "tile": "./assets/images/red.png",
             "matrix": [
                 [0, 1, 1],
                 [1, 1, 0],
@@ -49,7 +49,7 @@
         },
         {
             "name": "T",
-            "url": "./assets/sprites/block_purple.png",
+            "tile": "./assets/images/yellow.png",
             "matrix": [
                 [0, 1, 0],
                 [1, 1, 1],
@@ -58,7 +58,7 @@
         },
         {
             "name": "Z",
-            "url": "./assets/sprites/block_red.png",
+            "tile": "./assets/images/green.png",
             "matrix": [
                 [1, 1, 0],
                 [0, 1, 1],
