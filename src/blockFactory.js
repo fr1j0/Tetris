@@ -9,7 +9,6 @@ export default class BlockFactory {
     getBlock() {
         const rnd = (Math.random() * this.assets.length) | 0;
         const randomAsset = this.assets[rnd]
-        console.log('randomAsset -> ', randomAsset)
 
         let block = new Block(this.resources[randomAsset.name], randomAsset.matrix);
         block.x = Math.random()* 100;

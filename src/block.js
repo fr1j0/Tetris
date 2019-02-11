@@ -5,11 +5,24 @@ export default class Block extends PIXI.Container {
         super()
         this.resource = resource
         this.matrix = matrix
-        this.draw();
+        this.pos = 0
+        this._draw();
     }
 
-    draw() {
-        this.matrix.forEach(
+    nextPosition() {
+        this.pos = this.pos < this.matrix.length - 1 ? this.pos + 1 : 0
+    }
+
+    hexToMatrix(hex) {
+        return parseInt(hex, 16).toString(2).padStart(16, 0)
+            .match(/[01]{1,4}/g)
+            .map(bit => bit.split('').map(bit => parseInt(bit)))
+    }
+
+    _draw() {
+        this.removeChildren()
+        const matrixBin = this.hexToMatrix(this.matrix[this.pos])
+        matrixBin.forEach(
             (row, i) => row.forEach(
                 (col, j) => {
                     if (row[j]) {

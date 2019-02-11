@@ -24,9 +24,11 @@ class Main {
         this.initLayout()
         style;
 
-        this.blockFactory = new BlockFactory(config.assets, this.resources)
+        this.activeBlock = null
+
         this.keyLogger = new KeyLogger()
-        this.keyLogger.on('keyDown', (e) => console.log('EVENT EMITTED keyDown ', e))
+        this.keyLogger.on('keyDown', this.handleKeyDown.bind(this))
+        this.blockFactory = new BlockFactory(config.assets, this.resources)
     }
 
     initLayout() {
@@ -44,13 +46,22 @@ class Main {
     }
 
     setup() {
-        const activeBlock = this.app.stage.addChild(this.blockFactory.getBlock())
+        this.activeBlock = this.app.stage.addChild(this.blockFactory.getBlock())
         this.app.ticker.add(function(delta) {
             // just for fun, let's rotate mr rabbit a little
             // delta is 1 if running at 100% performance
             // creates frame-independent transformation
-            activeBlock.y += 0.1 * delta;
+            if(this.activeBlock) this.activeBlock.y += 0.1 * delta;
         });
+    }
+
+    handleKeyDown(keyCode){
+        console.log('handleKeyDown', keyCode)
+        switch (keyCode) {
+            case KeyLogger.KEYCODES.UP:
+                this.activeBlock.rotate();
+
+        }
     }
 }
 

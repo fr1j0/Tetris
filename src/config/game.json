@@ -5,65 +5,37 @@
         {
             "name": "I",
             "tile": "./assets/images/blue.png",
-            "matrix": [
-                [0, 0, 0, 0],
-                [1, 1, 1, 1],
-                [0, 0, 0, 0],
-                [0, 0, 0, 0]
-            ]
+            "matrix": ["0x0F00", "0x2222", "0x00F0", "0x4444"]
         },
         {
             "name": "J",
             "tile": "./assets/images/cyan.png",
-            "matrix": [
-                [0, 0, 0],
-                [1, 0, 0],
-                [1, 1, 1]
-            ]
+            "matrix": ["0x44C0", "0x8E00", "0x6440", "0x0E20"]
         },
         {
             "name": "L",
             "tile": "./assets/images/orange.png",
-            "matrix": [
-                [0, 0, 0],
-                [0, 0, 1],
-                [1, 1, 1]
-            ]
+            "matrix": ["0x4460", "0x0E80", "0xC440", "0x2E00"]
         },
         {
             "name": "O",
             "tile": "./assets/images/purple.png",
-            "matrix": [
-                [1, 1],
-                [1, 1]
-            ]
+            "matrix": ["0xCC00", "0xCC00", "0xCC00", "0xCC00"]
         },
         {
             "name": "S",
             "tile": "./assets/images/red.png",
-            "matrix": [
-                [0, 1, 1],
-                [1, 1, 0],
-                [0, 0, 0]
-            ]
+            "matrix": ["0x06C0", "0x8C40", "0x6C00", "0x4620"]
         },
         {
             "name": "T",
             "tile": "./assets/images/yellow.png",
-            "matrix": [
-                [0, 1, 0],
-                [1, 1, 1],
-                [0, 0, 0]
-            ]
+            "matrix": ["0x0E40", "0x4C40", "0x4E00", "0x4640"]
         },
         {
             "name": "Z",
             "tile": "./assets/images/green.png",
-            "matrix": [
-                [1, 1, 0],
-                [0, 1, 1],
-                [0, 0, 0]
-            ]
+            "matrix": ["0x0C60", "0x4C80", "0xC600", "0x2640"]
         }
     ]
 }
