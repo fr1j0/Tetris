@@ -1,4 +1,5 @@
 import * as PIXI from 'pixi.js';
+import config from './config/game'
 
 export default class Block extends PIXI.Container {
     constructor(resource, matrix) {
@@ -6,11 +7,26 @@ export default class Block extends PIXI.Container {
         this.resource = resource
         this.matrix = matrix
         this.pos = 0
-        this._draw();
+        this._draw()
+        this.coordinates = [0, 0]
     }
 
-    nextPosition() {
+    getMatrix() {
+        return this.hexToMatrix(this.matrix[this.pos])
+    }
+
+    rotate() {
         this.pos = this.pos < this.matrix.length - 1 ? this.pos + 1 : 0
+        this._draw()
+    }
+
+    move(xDiff, yDiff) {
+        this.coordinates[0] += xDiff
+        this.coordinates[1] += yDiff
+        console.log('this.coordinates', this.coordinates)
+        this.setTransform(xDiff, yDiff)
+        //this.setTransform(this.position.x + xDiff * config.block_size, this.position.y + yDiff * config.block_size)
+        console.log('position: ', '(', this.position.x)
     }
 
     hexToMatrix(hex) {
