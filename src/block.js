@@ -43,6 +43,7 @@ export default class Block extends PIXI.Container {
                 (col, j) => {
                     if (row[j]) {
                         const tile = new PIXI.Sprite(this.resource.texture)
+                        tile.width = tile.height = config.block_size
                         tile.x = j * tile.width
                         tile.y = i * tile.width
                         this.addChild(tile)
