@@ -65,7 +65,7 @@ class Main {
             .load(this.setup.bind(this));
     }
 
-    buildStageMatrix(){
+    buildStageMatrix() {
         return new Array(config.rows).fill([])
             .map(col => new Array(config.columns).fill(0))
     }
@@ -81,7 +81,7 @@ class Main {
         this.app.ticker.add(delta => this.update(delta))
     }
 
-    addNewBlock(){
+    addNewBlock() {
         const block = this.blockFactory.getBlock()
         this.activeBlock = this.app.stage.addChild(block)
         this.activeBlock.move(0, 0)
@@ -89,14 +89,14 @@ class Main {
 
     update(delta) {
         this.cumulatedDelta += delta
-        if(this.cumulatedDelta > this.interval){
+        if (this.cumulatedDelta > this.interval) {
             this.cumulatedDelta = 0
             this.activeBlock.move(0, 1)
             this.mergeMatrix()
         }
     }
 
-    mergeMatrix(){
+    mergeMatrix() {
         console.log(this.activeBlock.getMatrix())
     }
 
@@ -118,4 +118,4 @@ class Main {
     }
 }
 
-const main = new Main()
+new Main()

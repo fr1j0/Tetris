@@ -9,6 +9,10 @@ export default class KeyLogger extends EventEmitter {
         document.addEventListener('keydown', this.handleKeyDown.bind(this));
     }
 
+    componentWillUnmount(){
+        document.removeEventListener('keydown', this.handleKeyDown.bind(this));
+    }
+
     handleKeyDown(event) {
         if(Object.values(KeyLogger.KEYCODES).includes(event.keyCode)){
             this.emit('keyDown', event.keyCode)

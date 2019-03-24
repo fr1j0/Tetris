@@ -2,11 +2,12 @@ import * as PIXI from 'pixi.js';
 import config from './config/game'
 
 export default class Block extends PIXI.Container {
+
     constructor(resource, matrix) {
         super()
         this.resource = resource
         this.matrix = matrix
-        this.pos = 0
+        this.pos = 0  // matrix index
         this._draw()
         this.coordinates = [0, 0]
     }
@@ -23,10 +24,10 @@ export default class Block extends PIXI.Container {
     move(xDiff, yDiff) {
         this.coordinates[0] += xDiff
         this.coordinates[1] += yDiff
-        console.log('this.coordinates', this.coordinates)
+        //console.log('this.coordinates', this.coordinates)
         this.setTransform(xDiff, yDiff)
         //this.setTransform(this.position.x + xDiff * config.block_size, this.position.y + yDiff * config.block_size)
-        console.log('position: ', '(', this.position.x)
+        //console.log('position: ', '(', this.position.x)
     }
 
     hexToMatrix(hex) {
