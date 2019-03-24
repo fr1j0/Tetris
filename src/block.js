@@ -25,7 +25,7 @@ export default class Block extends PIXI.Container {
         this.coordinates[0] += xDiff
         this.coordinates[1] += yDiff
         //console.log('this.coordinates', this.coordinates)
-        this.setTransform(xDiff, yDiff)
+        this.setTransform(this.coordinates[0] * config.block_size, this.coordinates[1] * config.block_size)
         //this.setTransform(this.position.x + xDiff * config.block_size, this.position.y + yDiff * config.block_size)
         //console.log('position: ', '(', this.position.x)
     }
