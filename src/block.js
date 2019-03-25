@@ -1,4 +1,5 @@
 import * as PIXI from 'pixi.js';
+import { hexToMatrix } from './utils/math';
 import config from './config/game'
 
 export default class Block extends PIXI.Container {
@@ -13,7 +14,7 @@ export default class Block extends PIXI.Container {
     }
 
     getMatrix() {
-        return this.hexToMatrix(this.matrix[this.pos])
+        return hexToMatrix(this.matrix[this.pos])
     }
 
     rotate() {
@@ -30,16 +31,10 @@ export default class Block extends PIXI.Container {
         //console.log('position: ', '(', this.position.x)
     }
 
-    hexToMatrix(hex) {
-        return parseInt(hex, 16).toString(2).padStart(16, 0)
-            .match(/[01]{1,4}/g)
-            .map(bit => bit.split('').map(bit => parseInt(bit)))
-    }
-
     _draw() {
         this.removeChildren()
-        const matrixBin = this.hexToMatrix(this.matrix[this.pos])
-        matrixBin.forEach(
+        const binaryMatrix = hexToMatrix(this.matrix[this.pos])
+        binaryMatrix.forEach(
             (row, i) => row.forEach(
                 (col, j) => {
                     if (row[j]) {
